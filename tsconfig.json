@@ -21,10 +21,11 @@
     ]
   },
   "include": [
-	  "src/**/*"
+    "src/**/*",
+    "node_modules/jqwidgets-scripts/jqwidgets-ts"
 	],
 	"files": [
     "node_modules/jqwidgets-scripts/jqwidgets-ts/angular_jqxpivotgrid.ts",
-    "node_modules/jqwidgets-scripts/jqwidgets-ts/angular_jqxtextarea.ts"
+    "node_modules/jqwidgets-scripts/jqwidgets-ts/angular_jqxpivotdesigner.ts"
   ]
 }

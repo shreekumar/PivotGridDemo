@@ -1,6 +1,6 @@
 import { Component, AfterContentInit, ViewChild, AfterViewInit  } from '@angular/core';
 import { jqxPivotGridComponent } from "jqwidgets-scripts/jqwidgets-ts/angular_jqxpivotgrid";
-import { jqxTextAreaComponent } from 'jqwidgets-scripts/jqwidgets-ts/angular_jqxtextarea';
+import { jqxPivotDesignerComponent } from 'jqwidgets-scripts/jqwidgets-ts/angular_jqxpivotdesigner';
 
 @Component({
   selector: 'app-pivotgrid',
@@ -9,8 +9,8 @@ import { jqxTextAreaComponent } from 'jqwidgets-scripts/jqwidgets-ts/angular_jqx
 })
 export class PivotgridComponent {
 	
-	@ViewChild('pivotGrid', {static:false}) myPivotGrid: jqxPivotGridComponent;
-	@ViewChild('eventsLog', {static:false}) eventsLog: jqxTextAreaComponent; 
+	@ViewChild(jqxPivotGridComponent, {static:false}) myPivotGrid: jqxPivotGridComponent;
+	@ViewChild(jqxPivotDesignerComponent, {static:false}) pivotDesigner: jqxPivotDesignerComponent; 
 	//@ViewChild("hiddenField", {static:true}) block: ElementRef;
 
   	constructor() {
@@ -18,9 +18,18 @@ export class PivotgridComponent {
 	}
 	  
 	ngAfterViewInit(): void {
-		this.cells = this.myPivotGrid.getPivotCells();
-		let value = this.myPivotGrid.getPivotRows();
-		console.log(value);
+		let pivotGridComponent = this.myPivotGrid;
+		let pivotGridInstance = pivotGridComponent.getInstance();
+		
+		this.pivotDesigner.target(pivotGridInstance);
+		this.pivotDesigner.refresh();
+	}
+
+	getWidth() : any {
+		if (document.body.offsetWidth < 400) {
+			return '50%';
+		}		
+		return 400;
 	}
   
 	pivotDataSource: null;

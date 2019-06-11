@@ -1,16 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { jqxPivotGridComponent } from "jqwidgets-scripts/jqwidgets-ts/angular_jqxpivotgrid";
-import { jqxTextAreaComponent } from 'jqwidgets-scripts/jqwidgets-ts/angular_jqxtextarea';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PivotgridComponent } from './pivotgrid/pivotgrid.component';
+import { jqxPivotDesignerComponent } from 'jqwidgets-scripts/jqwidgets-ts/angular_jqxpivotdesigner';
 
 @NgModule({
   declarations: [
     AppComponent,
     jqxPivotGridComponent,
-    jqxTextAreaComponent,
+    jqxPivotDesignerComponent,
     PivotgridComponent
   ],
   imports: [
