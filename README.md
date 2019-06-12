@@ -1,6 +1,11 @@
 # PivotGridDemo
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
+Contains following Demos:
+1] Basic Data Binding
+2] Pivot Grid Custom Rendering
+3] Pivot Grid Designer
+4] Pivot Grid Totals
 
 ## Development server
 
