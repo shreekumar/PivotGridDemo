@@ -11,6 +11,7 @@ export class PivotgridComponent {
 
 	@ViewChild(jqxPivotGridComponent, { static: false }) myPivotGrid: jqxPivotGridComponent;
 	@ViewChild(jqxPivotDesignerComponent, { static: false }) pivotDesigner: jqxPivotDesignerComponent;
+
 	//@ViewChild("hiddenField", {static:true}) block: ElementRef;
 
 	constructor() {
@@ -34,6 +35,7 @@ export class PivotgridComponent {
 	}
 
 	pivotDataSource: null;
+
 	public cells: jqwidgets.PivotGridCells;
 	public text: string = '';
 
@@ -61,7 +63,7 @@ export class PivotgridComponent {
 				"2.25", "1.5", "3.0", "3.3", "4.5", "3.6", "3.8", "2.5", "5.0", "1.75", "3.25", "4.0"
 			];
 
-		for (let i = 0; i < 100; i++) {
+		for (let i = 0; i < 500; i++) {
 			let row = {};
 			let productindex = Math.floor(Math.random() * productNames.length);
 			let price = parseFloat(priceValues[productindex]);
