@@ -20,7 +20,7 @@
     "@angular/platform-browser-dynamic": "~8.0.0",
     "@angular/router": "~8.0.0",
     "@types/jquery": "^3.3.29",
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^3.4.1",
     "jquery": "^3.4.1",
     "jqwidgets-scripts": "^8.0.0",
     "popper": "^1.0.1",
